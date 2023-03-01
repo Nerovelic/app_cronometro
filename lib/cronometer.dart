@@ -17,6 +17,7 @@ class _CronometerState extends State<Cronometer> {
   void iniciarCronometro(){
     if (!estaCorriendo) {
       timer = Timer.periodic(const Duration(milliseconds: 10), (timer) {
+        // ignore: unnecessary_this
         this.milisegundos += 10;
         setState(() {});
       });
@@ -33,6 +34,7 @@ class _CronometerState extends State<Cronometer> {
   }
 
   void reiniciarCronometro(){   
+      // ignore: unnecessary_this
       this.milisegundos = 0; 
       setState(() {});
   }
