@@ -37,7 +37,9 @@ class _CronometerState extends State<Cronometer> {
   void reiniciarCronometro(){   
       // ignore: unnecessary_this
       this.milisegundos = 0;
-      setState(() {});
+      setState(() {
+        laps.clear();
+      });
   }
 
   void vueltaCronometro(){
